@@ -1,0 +1,24 @@
+{
+  "name": "law_firm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "tasks": [
+    {
+      "label": "Sass Compile",
+      "type": "shell",
+      "command": "node-sass styles.scss styles.css",
+      "group": "build"
+    }
+  ],
+  "author": "booklya",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.5.0",
+    "gulp-sass": "^4.0.1"
+  }
+}

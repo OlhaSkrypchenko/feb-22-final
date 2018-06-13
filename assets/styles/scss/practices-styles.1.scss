@@ -1,0 +1,57 @@
+@import "styles.scss";
+@import "variables";
+@import "mixins";
+
+.c-main {
+    .l-container {
+        @media screen and (max-width: 750px) {
+            flex-direction: column;
+            padding: 20px 0;
+        }
+
+        .c-aside {
+            .c-cite {
+                margin-top: 55px;
+
+                @media screen and (max-width: 750px) {
+                    display: none;
+                }
+
+                &__text {
+                    margin: 17px 0 0;   
+                    padding-top: 8px;
+                    padding-right: 30px;
+                }
+
+                &__author {
+                    padding-right: 30px;         
+                }
+            }
+        }
+
+        .c-content {
+            .c-title {
+                margin-bottom: 40px;
+                letter-spacing: 0.4px;
+            }
+
+            .c-image {
+                width: 98%;
+                height: auto;
+                padding: 1px;
+                background: #fff;
+                position: relative;
+                z-index: 1;
+            }
+
+                .c-article {
+                margin-right: 5px;
+
+                &__text {
+                    margin-top: 12px;
+                    margin-bottom: 25px;
+                }
+            }
+        }
+    }
+}                   

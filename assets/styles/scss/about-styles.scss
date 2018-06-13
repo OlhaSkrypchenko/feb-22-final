@@ -1,0 +1,40 @@
+@import "styles.scss";
+@import "variables";
+@import "mixins";
+
+.c-main {
+    .l-container {
+        display: block;
+        padding: 42px 15px 63px 12px;
+
+        .c-title {
+            margin-bottom: 18px;
+        }   
+
+        .c-image {
+            width: 100%;
+            height: auto;
+            padding: 1px;
+            background: #fff;   
+            position: relative;
+            z-index: 1;
+        }
+
+        .c-article{
+            margin-top: 30px;
+
+            .c-secondary-title {
+                margin-top: 24px;
+                letter-spacing: 0.2px;
+            }
+
+            &__text {
+                @include text-style($font-size:14px);
+
+                &--space {
+                    margin: 24px 0;
+                }
+            }
+        }
+    }
+}

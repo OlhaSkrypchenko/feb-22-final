@@ -1,0 +1,247 @@
+@import "styles.scss";
+@import "variables";
+@import "mixins";
+
+.c-main {
+    .l-banner {
+        min-height: 400px;
+        border-bottom: 1px solid $logo-color;
+        margin: 0 auto;
+        
+        @media screen and (max-width: 592px) {
+            display: none;
+        }
+    
+        .l-container {
+            &--banner {
+                align-items: flex-end;
+                padding: 0;
+                min-height: 400px;
+            }
+   
+            .c-banner {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                height: 383px;
+                background: $banner-color;
+                border: 1px solid $logo-color;
+                position: relative;
+                box-shadow: -8px 0 12px -10px rgba(0,0,0,0.4),
+                            8px 0 12px -10px rgba(0,0,0,0.4);
+
+                &::after {
+                    content: "";
+                    width: 80%;
+                    height: 10px;
+                    border-radius: 50%;
+                    background: red;
+                    position: absolute;
+                    z-index: -10;
+                    left: 10%;
+                    bottom: -10%;
+                    -webkit-box-shadow: 0px 0px 140px 200px rgba(0,0,0,0.15);
+                    -moz-box-shadow: 0px 0px 140px 200px rgba(0,0,0,0.15);
+                    box-shadow: 0px 0px 140px 200px rgba(0,0,0,0.15);
+                }
+
+                @media screen and (max-width: 937px) {
+                    justify-content: space-around;
+                }
+
+                &__moto {
+                    @include home-banner-text-style;
+                    margin: 85px 0 0 59px;
+                    text-align: center;
+
+                    @media screen and (max-width: 937px) {
+                        margin-left: 0;
+                    }
+
+                    &--size{
+                        font-size: 25px;
+                        line-height: 38px;
+                    }
+                }
+
+                .l-banner__image {
+                    position: relative;
+                    width: 63%;
+
+                    @media screen and (max-width: 937px) {
+                        width: 50%;
+                    }
+                }
+
+                &__image {
+                    position: absolute;
+                    bottom: 0;
+
+                    &--family {
+                        right: 0;
+                        width: 427px;
+                        height: 322px;
+                        background: url("../../imgs/home-page/Family-smiling-at-camera.png") no-repeat;
+
+                        @media screen and (max-width: 937px) {
+                            display: none;
+                        }
+                    }
+
+                    &--lawyer-male{
+                        left: 0.2%;
+                        width: 211px;
+                        height: 377px;
+                        background: url("../../imgs/home-page/Portrait-of-a-male-lawyer.png") no-repeat;
+
+                        @media screen and (max-width: 937px) {
+                            left: 12%;
+                        }
+
+                        @media screen and (max-width: 847px) {
+                            left: 8%;
+                        }
+
+                        @media screen and (max-width: 618px) {
+                            left: 0;
+                        }
+                    }
+
+                    &--lawyer-female {
+                        left: 21.8%;
+                        width: 224px;
+                        height: 346px;
+                        background: url("../../imgs/home-page/Portrait-of-a-female-lawyer.png") no-repeat;
+
+                        @media screen and (max-width: 937px) {
+                            left: 40%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .l-section {
+        min-height: 215px;
+        border-bottom: 1px solid $logo-color;
+        background: $banner-color;
+        
+        .l-container {
+            &--section {
+                display: block;
+                padding: 0;
+                min-height: 215px;
+            }
+
+            .c-section {
+                display: flex;
+                min-height: 100%;
+
+                .c-article {
+                    width: 64.47%;
+                    min-height: 100%;
+                    padding: 23px 20px 25px 10px;
+                    border-right: 1px dashed $logo-color;
+
+                    @media screen and (max-width: 592px) {
+                        width: 100%;
+                        border: none;
+                    }
+
+                    .c-title {
+                        margin-bottom: 30px;
+                    }
+                }   
+
+                .c-cite {
+                    width: 28.12%;
+                    padding: 23px 20px 25px 20px;
+
+                    @media screen and (max-width: 592px) {
+                        display: none;
+                    }
+
+                    .c-secondary-title {
+                        margin: 5px 0 25px;
+                    }
+
+                    &__text {
+                        margin-bottom: 0;
+                    }
+
+                    &__author {
+                        text-align: right;
+                        padding-right: 7px;
+                        margin-top: 0;
+                    }
+                } 
+            }
+        }
+    }
+    
+    .l-section-2nd {
+        min-height: 430px;
+        background: #d9d9d9;
+    }
+    
+    .l-container {
+        &--presentation {
+            display: block;
+            padding: 30px 0 0 10px;
+            min-height: 430px;
+        }
+
+        .c-presentation {
+            width: 100%;
+
+            .c-secondary-title {
+                @media screen and (max-width: 895px) {
+                    text-align: center;
+                }
+            }
+
+            .l-presentation__content{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                width: 100%;
+                margin-top: 20px;
+                padding: 0 5px 0 4px;
+                box-sizing: border-box;
+
+                @media screen and (max-width: 895px) {
+                    justify-content: center;
+                }
+
+                .c-figure {
+                    margin: 0;
+                    max-width: 219px;
+
+                    @media screen and (max-width: 895px) {
+                        margin: 10px 40px;
+                    }
+
+                    &__image {
+                        width: auto;
+                        height: 142px;
+                        padding: 0px;
+                        background: $logo-color;
+                        position: relative;
+                        z-index: 1;
+                    }
+
+                    &__text {
+                        margin: 0;
+                        padding-right: 5px;
+                    }
+
+                    &__link {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+}
+

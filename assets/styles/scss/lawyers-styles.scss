@@ -1,0 +1,182 @@
+@import "styles.scss";
+@import "variables";
+@import "mixins";
+
+.c-main {
+    .l-container {
+        .c-aside {             
+            .c-article {
+                .c-secondary-title {
+                    margin-top: 5px;
+                    margin: 5px 0 17px;
+                }
+
+                &__text {
+                    margin: 15px 0 16px;
+                    padding-top: 8px;
+                    padding-right: 10px;
+
+                    &:nth-of-type(1) {
+                        border-top: 1px dotted #fff;
+                        position: relative;
+
+                        &:before {
+                            content: "";
+                            width: 100%;
+                            height: 100%;
+                            border-top: 1px dotted rgba(0, 0, 0, 0.2);
+                            position: absolute;
+                            left: 1px;
+                            top: 1px;
+                            z-index: -1;
+                        }
+                    }
+                }
+            }
+        }
+
+        .c-content {
+            .c-title {
+                letter-spacing: 0.2px;
+                padding-left: 30px;
+                margin-top: 2px;
+            }
+
+            .l-line-up {
+                margin-top: 27px;
+                width: 100%;
+            }
+
+            .c-line-up {
+                width: 95.01%;
+                padding-left: 30px;
+                margin-bottom: 20px;
+                border-bottom: 1px dotted #fff;
+                position: relative;
+
+                &:before {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
+                    position: absolute;
+                    left: 1px;
+                    top: 1px;
+                    z-index: -1;
+                }
+
+                &:last-child {
+                    border-bottom: none;
+                    position: relative;
+
+                    &:before {
+                        content: "";
+                        width: 0;
+                        height: 0;
+                        border-bottom: none;
+                        position: absolute;
+                        z-index: -1;
+                    }
+                }
+
+                &--associates {
+                    padding-bottom: 5px;
+                    margin-bottom: 10px;
+                
+                }
+
+                .c-secondary-title {
+                    margin: 16px 0 20px;
+                }
+
+                .c-lawyer{
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 18px 0 20px;
+                    padding-left: 2px;
+
+                    @media  screen and (max-width: 750px) {
+                        height: 106px;
+                    }
+
+                    &--first {
+                        margin-bottom: 38px;
+                    }
+
+
+                    .l-lawyer-image {
+                        width: 90px;
+                        height: 94px;
+                        position: relative;
+                        z-index: 1; 
+                        padding: 6px;
+                        margin-right: 10px;
+                        background: #fff;
+                    }
+
+                    &__image {
+                        width: 90px;
+                        height: 94px;                               
+                        margin: 0 auto;
+                        box-shadow: 0 0 6px rgba(0, 0, 0, 0.7);;
+
+                        &--first {
+                            background: url("../../imgs/lawyers-page/Lawyer1.png");
+                        }
+
+                        &--second {
+                            background: url("../../imgs/lawyers-page/Lawyer2.png");
+                        }
+
+                        &--third {
+                            background: url("../../imgs/lawyers-page/Lawyer3.png");
+                        }
+
+                        &--fourth {
+                            background: url("../../imgs/lawyers-page/Lawyer4.png");
+                        }
+
+                        &--fifth {
+                            background: url("../../imgs/lawyers-page/Lawyer5.png");
+                        }
+                    }
+
+                    
+                    &__article {
+                        width: 77%;
+                        padding: 6px 12px 0 0;
+                        
+                            
+                        &-header {
+                            @include text-style ($font-size: 14px, $font-weight: bold);
+                            text-transform: uppercase;
+                        }
+
+                        &-text {
+                            height: 70px;
+                            @include text-style ($font-size: 14px);
+
+                            @media  screen and (max-width: 750px) {    
+                                overflow: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+        
+
+                
+                   
+
+
+
+         
+
+         
+
+
+
